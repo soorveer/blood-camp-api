@@ -5,8 +5,8 @@ import path from "path";
 import mongoose from "mongoose";
 import donarRoute from "./routes/donar.js"
 import campRoute from "./routes/camp.js"
+import ngosRoute from "./routes/ngo.js";
 // import authRoute from "./routes/auth.js";
-// import ngosRoute from "./routes/ngo.js";
 
 
 //App config
@@ -34,13 +34,13 @@ mongoose.connection.on("disconnected", () => {
 // middleware
 app.use(express.json());
 app.use(cors());
+app.use("/api/donar", donarRoute);
+app.use("/api/camp", campRoute);
+app.use("/api/ngo", ngosRoute);
 app.use("/", (req, res) => {
     res.status(200).render('home.ejs')
 })
-app.use("/api/donar", donarRoute);
-app.use("/api/camp", campRoute);
 // app.use("/api/auth", authRoute);
-// app.use("/api/ngo", ngosRoute);
 
 
 app.use((err, req, res, next) => {
