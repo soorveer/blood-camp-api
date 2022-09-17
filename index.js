@@ -56,7 +56,7 @@ app.use((err, req, res, next) => {
 
 
 // App listern
-app.listen(process.env.PORT, () => {
+app.listen(process.env.PORT || 8800, () => {
     connect();
     console.log("connected to backend");
 });
