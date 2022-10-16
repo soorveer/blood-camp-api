@@ -41,7 +41,7 @@ export const getCamp = async (req, res, next) => {
 export const getCamps = async (req, res, next) => {
     try {
         const camps = await Camp.find();
-        res.status(200).json(camps);
+        res.status(200).json(Object(camps));
     } catch (err) {
         next(err);
     }
