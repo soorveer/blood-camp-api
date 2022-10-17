@@ -17,7 +17,7 @@ const campSchema = mongoose.Schema({
     endDate: { type: Date, default: Date.now },
 
     mobile: {
-        type: Number,
+        type: String,
         required: true
     },
     email: {
