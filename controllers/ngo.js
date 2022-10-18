@@ -43,7 +43,7 @@ export const getNgo = async (req, res, next) => {
 export const getNgos = async (req, res, next) => {
     try {
         const ngos = await Ngo.find();
-        res.status(200).json(ngos);
+        res.status(200).json({data : ngos});
     } catch (err) {
         next(err);
     }
