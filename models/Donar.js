@@ -1,6 +1,12 @@
 import mongoose from "mongoose";
 
 const donarSchema = mongoose.Schema({
+    aadhar: {
+        type: String,
+        required: true,
+        unique: true,
+        primaryKey: true,
+    },
     donarname: {
         type: String,
         required: true,
@@ -9,12 +15,7 @@ const donarSchema = mongoose.Schema({
         type: String,
         required: true,
     },
-    aadhar: {
-        type: String,
-        required: true,
-        unique: true,
-        primaryKey: true,
-    },
+    
     mobile: {
         type: Number,
         required: true
