@@ -46,3 +46,12 @@ export const getCamps = async (req, res, next) => {
         next(err);
     }
 }
+
+export const getCampsAd = async (req, res, next) => {
+    try {
+        const camps1 = await Camp.findOne({mobile: req.params.mobile});
+        res.status(200).json({data: camps1});
+    } catch (err) {
+        next(err);
+    }
+}
