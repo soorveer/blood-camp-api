@@ -13,6 +13,6 @@ router.get("/:id", getDonar);
 
 router.get("/", getDonars);
 
-router.get("/donar/:aadhar",getDonarAd);
+router.get("/aadhar/:aadhar",getDonarAd);
 
 export default router;
