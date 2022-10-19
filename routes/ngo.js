@@ -10,7 +10,7 @@ router.put("/:id", updateNgo);
 
 router.delete("/:id", deleteNgo);
 
-router.get("/:reg",getNgoReg);
+router.get("/reg/:reg",getNgoReg);
 
 router.get("/:id", getNgo);
 
