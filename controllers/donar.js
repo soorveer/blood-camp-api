@@ -49,7 +49,7 @@ export const getDonars = async (req, res, next) => {
 }
 export const getDonarAd = async (req,res,next)=>{
     try{
-        const donar1 = await Donar.findOne({"aadhar":req.params.aadhar});
+        const donar1 = await Donar.findOne({aadhar:req.params.aadhar});
         res.status(200).json(donar1);
     }catch(err){
         next(err)
