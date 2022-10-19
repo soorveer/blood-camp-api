@@ -47,4 +47,12 @@ export const getNgos = async (req, res, next) => {
     } catch (err) {
         next(err);
     }
+export const getNgoReg = async(req,res,next)=>{
+    try{
+        const ngo1 = await Ngo.find({Unique_Registration_ID : req.params.reg});
+        res.status(200).json(ngo1);
+    }catch(err){
+        next(err);
+    }
+}
 }
