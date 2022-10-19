@@ -9,10 +9,12 @@ router.put("/:id", updateDonar);
 
 router.delete("/:id", deleteDonar);
 
+router.get("/reg/:reg",getDonarAd);
+
+
 router.get("/:id", getDonar);
 
 router.get("/", getDonars);
 
-router.get("/aad/:aad",getDonarAd);
 
 export default router;
