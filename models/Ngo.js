@@ -2,7 +2,7 @@ import mongoose from "mongoose";
 
 const ngoSchema = mongoose.Schema({
     Unique_Registration_ID: {
-        type: Number,
+        type: String,
         unique: true,
         required: true,
         primaryKey: true,
