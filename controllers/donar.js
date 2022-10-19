@@ -52,6 +52,6 @@ export const getDonarAd = async (req,res,next)=>{
         const donar1 = await Donar.findOne({aadhar:req.params.aadhar});
         res.status(200).json(donar1);
     }catch(err){
-        next(err)
+        next(err);
     }
 }
