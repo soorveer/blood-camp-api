@@ -12,7 +12,7 @@ const ngoSchema = mongoose.Schema({
         required: true,
     },
 
-    Date_of_Registration: Date,
+    Date_of_Registration: String,
     NGO_Type: String,
     NGO_Url: String,
     NGO_Address: String,
