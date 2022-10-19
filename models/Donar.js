@@ -10,7 +10,7 @@ const donarSchema = mongoose.Schema({
         required: true,
     },
     aadhar: {
-        type: Number,
+        type: String,
         required: true,
         unique: true
     },
