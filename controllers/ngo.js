@@ -55,4 +55,4 @@ export const getNgoReg = async(req,res,next)=>{
         next(err);
     }
 }
-}
+
