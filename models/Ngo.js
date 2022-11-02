@@ -7,12 +7,14 @@ const ngoSchema = mongoose.Schema({
         required: true,
         primaryKey: true,
     },
+    password: {
+        type: String,
+        required: true
+    },
     NGO_Name: {
         type: String,
         required: true,
     },
-
-    Date_of_Registration: String,
     NGO_Type: String,
     NGO_Url: String,
     NGO_Address: String,

@@ -1,20 +1,17 @@
 import express from "express";
 import dotenv from "dotenv";
 import cors from "cors";
-import path from "path";
 import mongoose from "mongoose";
 import donarRoute from "./routes/donar.js"
 import campRoute from "./routes/camp.js"
 import ngosRoute from "./routes/ngo.js";
-// import authRoute from "./routes/auth.js";
+import authRoute from "./routes/auth.js";
 
 
 //App config
 const app = express();
 dotenv.config();
 
-// app settings
-app.set('view engine', 'ejs');
 
 //DB config
 const connect = async () => {
@@ -27,20 +24,17 @@ const connect = async () => {
     }
 };
 
-mongoose.connection.on("disconnected", () => {
-    console.log("MongDB Disconnected");
-});
-
 // middleware
 app.use(express.json());
 app.use(cors());
 app.use("/api/donar", donarRoute);
 app.use("/api/camp", campRoute);
 app.use("/api/ngo", ngosRoute);
+app.use("/api/auth", authRoute);
 app.use("/", (req, res) => {
-    res.status(200).render('home.ejs')
+    res.status(200).json("Hello from first page...")
 })
-// app.use("/api/auth", authRoute);
+
 
 
 app.use((err, req, res, next) => {
@@ -56,7 +50,7 @@ app.use((err, req, res, next) => {
 
 
 // App listern
-app.listen(process.env.PORT || 8800, () => {
+app.listen(process.env.PORT, () => {
     connect();
     console.log("connected to backend");
 });
