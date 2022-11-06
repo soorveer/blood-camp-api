@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Donar</title>
+</head>
+<body>
+    <script>
+        var donar = '<%- JSON.stringify(donar) %>'; // test is now a valid js object
+    </script>
+    <div class="container" style="display: flex; flex: 1; justify-content: center; align-items: center; background-color: #DDD;" >
+        <% if (donar) {%>
+            <div>
+                <div style="display: flex; align-items: center;" >
+                    <h3>Donar Name:</h3>
+                    <p style="margin-left: 10px;" ><%= donar?.donarname %></p>
+                </div>
+                <div style="display: flex; align-items: center;" >
+                    <h3>Email:</h3>
+                    <p style="margin-left: 10px;" ><%= donar?.email %></p>
+                </div>
+                <div style="display: flex; align-items: center;" >
+                    <h3>Aadhar:</h3>
+                    <p style="margin-left: 10px;" ><%= donar?.aadhar %></p>
+                </div>
+                <div style="display: flex; align-items: center;" >
+                    <h3>Mobile:</h3>
+                    <p style="margin-left: 10px;" ><%= donar?.mobile %></p>
+                </div>
+                <div style="display: flex; align-items: center;" >
+                    <h3>Blood group:</h3>
+                    <p style="margin-left: 10px;" ><%= donar?.bloodGroup %></p>
+                </div>
+                <div style="display: flex; align-items: center;" >
+                    <h3>Times:</h3>
+                    <p style="margin-left: 10px;" ><%= donar?.times %></p>
+                </div>
+                <div style="display: flex; align-items: center;" >
+                    <h3>Address:</h3>
+                    <p style="margin-left: 10px;" ><%= donar?.address %></p>
+                </div>
+            </div>
+        <% }%>
+    </div>
+</body>
+</html>
