@@ -25,6 +25,7 @@ const connect = async () => {
 };
 
 // middleware
+app.set("view engine", "ejs");
 app.use(express.json());
 app.use(cors());
 app.use("/api/donar", donarRoute);
