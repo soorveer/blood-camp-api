@@ -32,6 +32,9 @@ const donarSchema = mongoose.Schema({
         type: String,
         required: true
     },
+    location: [{
+    type: String
+        }],
     orgId: {
         type: String,
         required: true
