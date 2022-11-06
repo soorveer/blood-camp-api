@@ -42,6 +42,23 @@
                     <p style="margin-left: 10px;" ><%= donar?.address %></p>
                 </div>
                 <div style="display: flex; align-items: center;" >
+                    <h3>Previous Location:</h3>
+                </div>
+                <ul>
+     <% for(var i= 0 ; i < donar.location.length-1; i++) {%>
+         <li>
+             <span><%=donar.location[i].count %>
+         </li>
+         <ul>
+             <% for(var j=0 ; j < donar.location[i].rows.length; j++) {%>
+                 <li>
+                     <span><%=donar.location[i].rows[j].p_id %>
+                 </li>
+             <% } %>
+         </ul>
+     <% } %>
+</ul>
+                <div style="display: flex; align-items: center;" >
                     <h3>Current Location:</h3>
                     <p style="margin-left: 10px;" ><%= donar?.location[donar.location.length-1] %></p>
                 </div>
