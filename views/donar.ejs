@@ -44,15 +44,14 @@
                 <div style="display: flex; align-items: center;" >
                     <h3>Previous Location:</h3>
                 </div>
-                <ul>
+              
      <% for(var i= 0 ; i < donar.location.length-1; i++) {%>
-         <li>
+         
              <span><%=donar.location[i] %>
-         </li>
+         
          
      <% } %>
-</ul>
-                <div style="display: flex; align-items: center;" >
+         <div style="display: flex; align-items: center;" >
                     <h3>Current Location:</h3>
                     <p style="margin-left: 10px;" ><%= donar?.location[donar.location.length-1] %></p>
                 </div>
