@@ -18,7 +18,28 @@ export const updateDonar = async (req, res, next) => {
     } catch (err) {
         next(err);
     }
+}
 
+export const updateDonarLocation = async (req, res, next) => {
+    const { donarId } = req.params
+    const { location } = req.body
+    
+    let oldDonar
+    
+    try {
+        oldDonar = await Donar.findById({ _id: donarId })
+    } catch (err) {
+        res.statut(500).json({ message: error.message })
+    }
+    
+    oldDonar.location = [...oldDonar.location, location]
+    
+    try {
+        const updatedDonar = await oldDonar.save()
+        res.status(201).json(updatedDonar)
+    } catch (err) {
+        res.statut(500).json({ message: error.message })
+    }
 }
 
 export const deleteDonar = async (req, res, next) => {
