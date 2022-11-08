@@ -23,13 +23,11 @@ const ngoSchema = mongoose.Schema({
 
     NGO_PAN_Number: {
         type: String,
-        unique: true,
-        required: true,
+        required: true
     },
     CSR_Number: {
         type: String,
-        required: true,
-        unique: true,
+        required: true
     }
     
 
