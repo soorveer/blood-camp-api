@@ -48,6 +48,27 @@ export const getNgos = async (req, res, next) => {
         next(err);
     }
 }
+
+export const sigin = async (req,res,next) => {
+    const { user } = req.body
+    const { password }= req.body
+    
+    try{
+        const ngo= await Ngo.find({Unique_Registration_ID:user,password:password});
+        if(ngo!= null)
+        {
+            res.send({"success":1});
+        }
+        else
+        {
+            res.send({"success":0});
+        }
+    } catch(err){
+        next(err);
+    }
+    
+}
+
 // export const signin = async(req,res,next)=>{
 //     try{
 //         const ngo = await Ngo.find({Unique_Registration_ID:req.params.user,password:req.params.password});
