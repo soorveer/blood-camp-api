@@ -80,6 +80,10 @@ export const sign = async (req,res,next) => {
 export const getNgoReg = async(req,res,next)=>{
     try{
         const ngo1 = await Ngo.findOne({Unique_Registration_ID : req.params.reg});
+        if(ngol == null)
+        {
+            res.send({"success":false});
+        }
         res.status(200).json(ngo1);
     }catch(err){
         next(err);
