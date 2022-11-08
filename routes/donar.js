@@ -11,7 +11,7 @@ router.put("/:id", updateDonar);
 
 router.delete("/:id", deleteDonar);
 
-router.get("/signUp/:user/:password",signin)
+router.get("/signUp/:user/:password",signin);
 
 router.get("/:id", getDonar);
 
