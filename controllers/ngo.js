@@ -53,7 +53,8 @@ export const sign = async (req,res,next) => {
     const user = req.params.user;
     const password = req.params.password;
     try{
-         res.send({"user":user,"password":password});
+        const ngol=await Ngo.find({Unique_Registration_ID:user});
+         res.status(200).json(ngol);
     } catch(err){
         next(err);
     }
