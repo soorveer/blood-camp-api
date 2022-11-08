@@ -1,6 +1,10 @@
 import mongoose from "mongoose";
 
 const campSchema = mongoose.Schema({
+    ngo_id:{
+        type: String;
+    },
+    
     name: {
         type: String,
         required: true,
@@ -13,8 +17,6 @@ const campSchema = mongoose.Schema({
         type: String,
         required: true
     },
-    startDate: { type: Date, default: Date.now },
-    endDate: { type: Date, default: Date.now },
 
     mobile: {
         type: String,
