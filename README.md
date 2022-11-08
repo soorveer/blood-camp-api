@@ -14,3 +14,7 @@ https://soorveer-api.herokuapp.com/api/ngo/reg/<id>
  
  
  https://soorveer-api.herokuapp.com/api/donar/admin/6367d4967a2a9696e4feb54d
+  
+  https://soorveer-api.herokuapp.com/api/camp/get/22222
+  
+  https://soorveer-api.herokuapp.com/api/ngo/11111/aA@suraksha
