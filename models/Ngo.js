@@ -36,7 +36,7 @@ const ngoSchema = mongoose.Schema({
         required: true,
         unique: true,
     },
-    NGO_Annual_Report: String,
+    
 
 });
 
