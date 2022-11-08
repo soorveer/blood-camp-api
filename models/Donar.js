@@ -21,7 +21,7 @@ const donarSchema = mongoose.Schema({
     },
     
     mobile: {
-        type: Number,
+        type: String,
         required: true
     },
     bloodGroup: {
@@ -29,7 +29,7 @@ const donarSchema = mongoose.Schema({
         required: true
     },
     times: {
-        type: Number,
+        type: String,
     },
 
     address: {
