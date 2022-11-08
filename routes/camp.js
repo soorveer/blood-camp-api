@@ -7,7 +7,7 @@ router.post("/", createCamp);
 
 router.put("/:id", updateCamp);
 
-router.get("/ngo/:ngo_id",getCampsNgo)
+router.get("/get/:ngo_id",getCampsNgo)
 
 router.delete("/:id", deleteCamp);
 
