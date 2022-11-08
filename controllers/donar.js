@@ -63,7 +63,7 @@ export const getDonar = async (req, res, next) => {
 export const getDonarCamp = async(req,res,next)=>{
     try{
         const camp_id1 = req.params.camp_id;
-        const donarN = await Camp.find({camp_id:camp_id1});
+        const donarN = await Donar.find({camp_id:camp_id1});
         res.status(200).json({data: donarN});
     } catch(err)
     {
