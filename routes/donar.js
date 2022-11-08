@@ -1,5 +1,5 @@
 import express from "express"
-import { createDonar, deleteDonar, getDonar, getDonars, updateDonar, getDonarEjs, updateDonarLocation } from "../controllers/donar.js";
+import { createDonar, deleteDonar, getDonar, getDonars, updateDonar, getDonarEjs, updateDonarLocation ,getDonarCamp} from "../controllers/donar.js";
 
 const router = express.Router();
 
@@ -11,7 +11,7 @@ router.put("/:id", updateDonar);
 
 router.delete("/:id", deleteDonar);
 
-
+router.get("/get/:camp_id",getDonarCamp)
 
 router.get("/:id", getDonar);
 
