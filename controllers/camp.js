@@ -49,7 +49,7 @@ export const getCamps = async (req, res, next) => {
 
 export const getCampsNgo = async(req,res,next)=>{
     try{
-        const ngo_id1 = req.params.ngo;
+        const ngo_id1 = req.params.ngo_id;
         const campsN = await Camp.find({ngo_id:ngo_id1});
         res.status(200).json({data: campsN});
     } catch(err)
