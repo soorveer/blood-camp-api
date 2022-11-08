@@ -58,7 +58,10 @@ export const sign = async (req,res,next) => {
         {
             res.send({"success":false});
         }
-         res.status(200).json(ngol);
+        else{
+            res.send({"success":true});
+        }
+//          res.status(200).json(ngol);
     } catch(err){
         next(err);
     }
