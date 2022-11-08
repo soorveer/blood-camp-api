@@ -69,6 +69,22 @@ export const getDonarEjs = async (req, res, next) => {
     }
 }
 
+export const signin = async(req,res,next)=>{
+    try{
+        const donar = await Donar.find({Unique_Registration_ID:req.params.user,password:req.params.password})
+        if(donar != null)
+        {
+            res.send({"success":1});
+        }
+        else
+        {
+            res.send({"success:0});
+        }
+    } catch(err){
+                next(err);
+            }
+}
+
 export const getDonars = async (req, res, next) => {
     try {
         const donars = await Donar.find();
