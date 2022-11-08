@@ -1,6 +1,10 @@
 import mongoose from "mongoose";
 
 const donarSchema = mongoose.Schema({
+    
+    camp_id: {
+        type: String,
+    },
     aadhar: {
         type: String,
         required: true,
