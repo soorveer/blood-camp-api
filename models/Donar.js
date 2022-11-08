@@ -34,11 +34,8 @@ const donarSchema = mongoose.Schema({
     },
     location: [{
     type: String
-        }],
-    orgId: {
-        type: String,
-        required: true
-    }
+        }]
+   
 });
 
 export default mongoose.model("donarcontents", donarSchema);
