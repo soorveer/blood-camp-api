@@ -6,6 +6,9 @@ const campSchema = mongoose.Schema({
         type: String,
         required: true,
     },
+    ngo_id:{
+        type: String;
+    },
     address: {
         type: String,
         required: true
