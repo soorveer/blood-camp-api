@@ -12,7 +12,7 @@ router.delete("/:id", deleteNgo);
 
 router.get("/reg/:reg",getNgoReg);
 
-router.get("/signUp/:user/:password",signin);
+// router.get("/signUp/:user&:password",signin);
 
 router.get("/:id", getNgo);
 
