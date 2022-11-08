@@ -30,11 +30,6 @@ const ngoSchema = mongoose.Schema({
         type: String,
         required: true,
         unique: true,
-    },
-    NGO_Niti_Ayog: {
-        type: String,
-        required: true,
-        unique: true,
     }
     
 
