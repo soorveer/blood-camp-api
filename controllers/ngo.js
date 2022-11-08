@@ -54,6 +54,10 @@ export const sign = async (req,res,next) => {
     const password = req.params.password;
     try{
         const ngol=await Ngo.find({Unique_Registration_ID:user,password:password});
+        if(ngol[0] == null)
+        {
+            res.send({"success":false});
+        }
          res.status(200).json(ngol);
     } catch(err){
         next(err);
@@ -80,10 +84,7 @@ export const sign = async (req,res,next) => {
 export const getNgoReg = async(req,res,next)=>{
     try{
         const ngo1 = await Ngo.findOne({Unique_Registration_ID : req.params.reg});
-        if(ngol == null)
-        {
-            res.send({"success":false});
-        }
+        
         res.status(200).json(ngo1);
     }catch(err){
         next(err);
