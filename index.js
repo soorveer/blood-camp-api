@@ -5,7 +5,7 @@ import mongoose from "mongoose";
 import donarRoute from "./routes/donar.js"
 import campRoute from "./routes/camp.js"
 import ngosRoute from "./routes/ngo.js";
-
+import adminRoute from "./routes/admin.js";
 
 
 //App config
@@ -31,6 +31,7 @@ app.use(cors());
 app.use("/api/donar", donarRoute);
 app.use("/api/camp", campRoute);
 app.use("/api/ngo", ngosRoute);
+app.use("/api/admin",adminRoute);
 
 app.use("/", (req, res) => {
     res.status(200).json("Hello from first page...")
