@@ -84,7 +84,7 @@ export const getDonarEjs = async (req, res, next) => {
 export const getDonars = async (req, res, next) => {
     try {
         const donars = await Donar.find();
-        res.status(200).json(donars);
+        res.status(200).json({ data : donars});
     } catch (err) {
         next(err)
     }
