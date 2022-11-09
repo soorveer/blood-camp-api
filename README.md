@@ -20,3 +20,5 @@ https://soorveer-api.herokuapp.com/api/ngo/reg/<id>
   https://soorveer-api.herokuapp.com/api/ngo/11111/aA@suraksha
   
   https://soorveer-api.herokuapp.com/api/donar/get/three
+  
+  https://soorveer-api.herokuapp.com/api/admin/admin2/22222
